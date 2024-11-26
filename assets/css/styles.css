@@ -83,9 +83,9 @@ email: onyeweketerence@gmail.com
 .hero {
     height: auto;
     /* background-image: url(../img/hero-img.png); */
-    background-position: center !important;
+    background-position: top !important;
     background-size: cover !important;
-    background-position: center !important;
+    background-position: center 20% !important;
     background-repeat: no-repeat !important;
     background: url(../img/poly\ hero.jpg);
 

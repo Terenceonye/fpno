@@ -251,11 +251,11 @@ ol {
 
 
 
-  /* Scroll To Top Btn */
+/* Scroll To Top Btn */
 #scrollBtn {
-    width: 50px;
-    height: 50px;
-    display: block;
+    display: flex;
+    justify-content: center; /* Horizontally center the icon */
+    align-items: center; /* Vertically center the icon */
     position: fixed;
     bottom: 20px;
     right: 30px;
@@ -266,9 +266,12 @@ ol {
     background-color: var(--primary);
     color: white;
     cursor: pointer;
-    padding: 0.8rem 1rem;
+    padding: 10px;
     border-radius: 50%;
     animation: bubble 2s infinite ease-in-out; /* Apply animation */
+    border: 2px solid var(--secondary);
+    width: 60px; /* Define width of the circle */
+    height: 60px; /* Define height of the circle */
 }
 
 /* Keyframes for the bubbling animation */
@@ -281,10 +284,16 @@ ol {
     }
 }
 
-    #scrollBtn:hover{
-      background-color: var(--secondary);
-      transition: 1s;
- }
+#scrollBtn i {
+    font-size: 30px;
+    /* Ensure the icon is centered by adjusting its size and alignment */
+}
+
+/* Hover effect */
+#scrollBtn:hover {
+    background-color: var(--secondary);
+    transition: 1s;
+}
 
 
  /* for the header line */

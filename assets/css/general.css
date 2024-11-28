@@ -248,3 +248,48 @@ ol {
       font-size: .8rem !important;
     }
   }
+
+
+
+  /* Scroll To Top Btn */
+#scrollBtn {
+    width: 50px;
+    height: 50px;
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    padding: 0.8rem 1rem;
+    border-radius: 50%;
+    animation: bubble 2s infinite ease-in-out; /* Apply animation */
+}
+
+/* Keyframes for the bubbling animation */
+@keyframes bubble {
+    0%, 100% {
+        transform: translateY(0); /* Start at normal position */
+    }
+    50% {
+        transform: translateY(-10px); /* Move upwards */
+    }
+}
+
+    #scrollBtn:hover{
+      background-color: var(--secondary);
+      transition: 1s;
+ }
+
+
+ /* for the header line */
+
+ header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+ }

@@ -159,23 +159,40 @@ function navba_close() {
 
 
 //Scroll To Top Btn
+// let btnScroll = document.getElementById("scrollBtn");
+
+// window.onscroll = function() {scrollFunction()};
+
+// function scrollFunction() {
+//   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+//     btnScroll.style.display = "block";
+//   } else {
+//     btnScroll.style.display = "none";
+//   }
+// }
+// function topFunction() {
+//   document.body.scrollTop = 0;
+//   document.documentElement.scrollTop = 0;
+// }
+ 
+
+
+// chatbtn
+
 let btnScroll = document.getElementById("scrollBtn");
 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  
     btnScroll.style.display = "block";
-  } else {
-    btnScroll.style.display = "none";
-  }
+
 }
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
  
-
 
 
     

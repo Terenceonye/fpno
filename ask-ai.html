@@ -233,7 +233,7 @@
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ context: "The capital of Nigeria is Abuja", question: userMessage }),
+        body: JSON.stringify({ question: userMessage }),
       });
 
       const data = await response.json();

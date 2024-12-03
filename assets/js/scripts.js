@@ -34,9 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             wrapper.querySelector('.btn-close').addEventListener('click', () => {
                 // After closing the alert, append "alert closed" message
                 setTimeout(()=> {
-                    const closedMessage = document.createElement('div');
-                closedMessage.innerHTML = '<div class="alert alert-info">I am FPNO AI. You can ask me anything about our Polytechnic!</div>';
-                alertPlaceholder.append(closedMessage);
+                    appendAlert('I am FPNO AI. You can ask me anything about our Polytechnic!', 'info');
                 }, 300000)
                 
             });

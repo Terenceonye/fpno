@@ -1,4 +1,4 @@
-//Insert Header and Footer Plus Dropdown menu in small screen
+// Insert Header and Footer Plus Dropdown menu in small screen
 document.addEventListener("DOMContentLoaded", () => {
     // Load Header and Footer
     $(document).ready(function () {
@@ -8,9 +8,46 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Load Footer
-        $("#footer").load("footer.html");
+        $("#footer").load("footer.html", function () {
+            initializechatinfo(); // Initialize chat info (alert) after footer is loaded
+        });
     });
 
+    // Function to initialize the chat popup alert
+    function initializechatinfo() {
+        // Trigger Alert AFTER Footer is Loaded
+        const alertPlaceholder = document.getElementById('liveAlertPlaceholder');
+        
+        // Function to create and append the alert
+        const appendAlert = (message, type) => {
+            const wrapper = document.createElement('div');
+            wrapper.innerHTML = [
+                `<div class="alert alert-${type} alert-dismissible fade show" role="alert">`,
+                `   <div>${message}</div>`,
+                '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+                '</div>'
+            ].join('');
+        
+            alertPlaceholder.append(wrapper);
+        
+            // Close event listener for the alert
+            wrapper.querySelector('.btn-close').addEventListener('click', () => {
+                // After closing the alert, append "alert closed" message
+                setTimeout(()=> {
+                    const closedMessage = document.createElement('div');
+                closedMessage.innerHTML = '<div class="alert alert-info">I am FPNO AI. You can ask me anything about our Polytechnic!</div>';
+                alertPlaceholder.append(closedMessage);
+                }, 300000)
+                
+            });
+        };
+    
+        // Automatically trigger the alert when footer is loaded
+        appendAlert('I am FPNO AI. You can ask me anything about our Polytechnic!', 'info');
+    }
+    
+
+    // Function to initialize dropdown menu for small screens
     function initializeDropdowns() {
         // Attach event listeners to dropdown buttons
         var dropdown = document.getElementsByClassName("dropdown-button");
@@ -27,6 +64,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 });
+
+
+
+
 
 
 

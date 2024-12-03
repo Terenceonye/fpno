@@ -165,9 +165,6 @@ email: onyeweketerence@gmail.com
     height: 100%;
  }
 
- .hero  .col-lg-6{
-    /* height: 78vh; */
- }
 
  .hero .hero-box{
     position: absolute;
@@ -203,9 +200,7 @@ email: onyeweketerence@gmail.com
         padding: 2rem 3rem 0 2rem;
         border-radius: 20px;
      }
-     .hero  .col-lg-6{
-        /* height: 84vh; */
-     }
+   
 
      .hero .blur-content{
         transform: translateY(-10%) !important;
@@ -543,9 +538,7 @@ email: onyeweketerence@gmail.com
         flex-direction: column;
     } 
 
-    .woman-image {
-         /* Adjust for smaller screens */
-    }
+ 
 }
 
 
